@@ -88,6 +88,12 @@ const handleNoteDelete = (e) => {
   if (activeNote.id === noteId) {
     activeNote = {};
   }
+  const testDelete = async () => {
+    let test = "d9d0d2e2-ada7-4f03-a812-f26c1a588268"
+    let response = await deleteNote(test);
+    console.log(response.json());
+  }
+
 
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
