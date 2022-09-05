@@ -11,10 +11,9 @@ I also had a lot of trouble with Git, it kept locking me out of pushing to my ma
 
 
 # Technologies Used:
-</li>Express.js
-</li>RESTful API
-</li>HTML 
-</li> CSS
-</li> Bootstrap
-</li>javascript
-</li>
+<li>Express.js</li>
+<li>RESTful API</li>
+<li>HTML </li>
+<li> CSS</li>
+<li> Bootstrap</li>
+<li>javascript</li>
