@@ -1,12 +1,16 @@
-const router=require("express").Router()
-const path=require("path")
+const router= require ('express')
+const router = express.Router();
+const fs = require('fs');
+const path=require('path');
 
-router.get("/notes",(req,res)=>{
-    res.sendFile(path.join(__dirname,'./public/notes.html'))
-})
+const getPath =(name)=> path.join(__dirname, '..', 'public', `${name}.html`);
 
-router.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname,'./public/index.html'))
-})
+router.get('/notes',(req,res)=>{
+    res.sendFile(path.getPathjoin(__dirname,"notes"));
+});
 
-module.exports=router
+router.get('*',(req,res)=>{
+    res.sendFile(getPath.join(__dirname,"index"));
+});
+
+module.exports=router;

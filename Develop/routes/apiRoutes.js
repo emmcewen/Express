@@ -1,48 +1,35 @@
-const router = require("express").Router()
-const fs = require("fs")
+const router = express.Router();
+const uuid = require('uuid');
+const express = require('express');
+ let data = require ('../db/db.json');
 
-router.get("/api/notes/:id", (req, res) => {
-    res.json(notes[req.params.id]);
-})
+router.get('/', (req, res)=>res.json(data));
 
-router.get("/api/notes", (req, res) => {
-    fs.readFile("../db/db.json","utf-8", (err, data) => {
-        if (err) throw err;
-        var notes = JSON.parse(data);
-        res.json(notes);
-    })
-})
-
-
-router.post("/api/notes", (req, res) => {
-    fs.readFile("../db/db.json", "utf8", (err, data) => {
-        if (err) throw err;
-        var notes = JSON.parse(data);
-        let userNote = req.body;
-        userNote.id = Math.floor(Math.random() * 5000);
-        notes.push(userNote);
-        fs.writeFile("../db/db.json", JSON.stringify(notes), (err, data) => {
-            res.json(userNote);
-
-        });
-    });
-
+router.post('/', (req, res) => {
+    const newTitle = req.body.title;
+    const newText = req.body.text;
+    if (!newTitle || newText) {
+        res.status(400).json ({msg:'input title/text'})
+} else{
+     const newJSON ={
+        id:uuid.v4 (),
+        title:newTitle,
+        text: newText,
+    };
+    data.push (newJSON);
+    res.json(data);     
+     };
 });
 
-router.delete("/api/notes:id", (req, res) => {
-    fs.readFile("../db/db.json", "utf8", (err, data) => {
-        if (err) throw err;
-        let notes = JSON.parse(data);
-        const newNotes = notes.filter(note => note.id !== parseInt(req.params.id));
-
-        fs.writeFile(("../db/db.json", JSON.stringify(newNotes), (err, data) => {
-            res.json({ message: "success" });
-
-        }
-        ));
-
+router.delete('/:id', (req, res) => {
+    const found = data.some (obj=> obj.id===req.params.id);
+    if (found) {
+        data=data.filter(obj=> obj.id !==req.params.id);
+        res.json(data);
+        
+    } else {
+        res.status (400).json(data);
+    };
     });
-});
 
-
-    module.exports = router
+    module.exports = router;
