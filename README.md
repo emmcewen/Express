@@ -9,7 +9,10 @@ When title is entered you may enter note. There should be a save icon in the upp
 
 I also had a lot of trouble with Git, it kept locking me out of pushing to my main branch so I had to create a another branch and push files to that instead. I thought about deleting the entire repository but I had already spent far too much time trying to debug this app. 
 
+# ScreenShots of app
+[NoteTaker index page](assets/NoteTaker1.png)
 
+[NoteTaker notes page](assets/NoteTaker2.png)
 
 # Technologies Used:
 <li>Express.js</li>
