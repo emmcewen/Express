@@ -1,35 +1,30 @@
-const router = express.Router();
-const uuid = require('uuid');
-const express = require('express');
- let data = require ('../db/db.json');
+const router = require("express").Router();
+const uuid = require("../Helpers/uuid");
+let data = require("../db/db.json");
+const fs = require("fs");
+const path = require("path");
 
-router.get('/', (req, res)=>res.json(data));
+router.get("/notes", (req, res) => res.json(data));
 
-router.post('/', (req, res) => {
-    const newTitle = req.body.title;
-    const newText = req.body.text;
-    if (!newTitle || newText) {
-        res.status(400).json ({msg:'input title/text'})
-} else{
-     const newJSON ={
-        id:uuid.v4 (),
-        title:newTitle,
-        text: newText,
-    };
-    data.push (newJSON);
-    res.json(data);     
-     };
+router.post("/notes", (req, res) => {
+  req.body.id = uuid();
+  data.push(req.body);
+  fs.writeFileSync(
+    path.join(__dirname, "./db/db.json"),
+    JSON.stringify(data, null, 2),
+  
+  );
+  res.json(req.body)
 });
 
-router.delete('/:id', (req, res) => {
-    const found = data.some (obj=> obj.id===req.params.id);
-    if (found) {
-        data=data.filter(obj=> obj.id !==req.params.id);
-        res.json(data);
-        
-    } else {
-        res.status (400).json(data);
-    };
-    });
+router.delete("/:id", (req, res) => {
+  const found = data.some((obj) => obj.id === req.params.id);
+  if (found) {
+    data = data.filter((obj) => obj.id !== req.params.id);
+    res.json(data);
+  } else {
+    res.status(400).json(data);
+  }
+});
 
-    module.exports = router;
+module.exports = router;

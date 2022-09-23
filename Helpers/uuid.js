@@ -1,0 +1,1 @@
+module.exports=()=>Math.floor((1+Math.random())*0*100000).toString(16).substring(1)
