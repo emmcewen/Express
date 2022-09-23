@@ -1,7 +1,7 @@
 const router= require ('express')
 const router = express.Router();
 const fs = require('fs');
-const path=require('path');
+const path =require('path');
 
 const getPath =(name)=> path.join(__dirname, '..', 'public', `${name}.html`);
 
