@@ -4,15 +4,52 @@
 
 This project is a note taker that can be used to write and save notes. 
 Main functions of this app are: 
+The app allows you take a note and save the note in local storage. I was unable to get the delete note to work, but the rest works.
 
-When title is entered you may enter note. There should be a save icon in the upper left side of the page for saving notes and creating news. I could not get my app to work properly despite the amount of time I tried and many different ways to debug everything didn't seem to work. 
+## Usage
+Type in location and see the 5 day forecast for the area and see previous locations searched. 
 
-I also had a lot of trouble with Git, it kept locking me out of pushing to my main branch so I had to create a another branch and push files to that instead. I thought about deleting the entire repository but I had already spent far too much time trying to debug this app. 
+ <a href="https://emmcewen.github.io/Weather_Dashboard/">Click for live link</a>
 
 # ScreenShots of app
-[NoteTaker index page](Assets/NoteTaker1.png)
+![screenshot1](Assets/WeatherDashboard-Screenshot.png)
 
-[NoteTaker notes page](Assets/NoteTaker2.png)
+## Credits
+
+GitHub: https://github.com/emmcewen/ExpressNoteTaker
+
+## License
+MIT License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) [2022] [Emily McEwen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
+SOFTWARE.
+
+## Badges
+
+![badmath](https://img.shields.io/static/v1?label=JavaScript&message=72%&color=blue)<br>
+![badmath](https://img.shields.io/static/v1?label=Handlebars&message=23%&color=orange)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=4%&color=yellow)<br>
+
 
 # Technologies Used:
 <li>Express.js</li>
@@ -21,3 +58,13 @@ I also had a lot of trouble with Git, it kept locking me out of pushing to my ma
 <li> CSS</li>
 <li> Bootstrap</li>
 <li>javascript</li>
+
+
+  
+  
+
+
+
+
+  
+  
