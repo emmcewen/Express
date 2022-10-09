@@ -10,6 +10,7 @@ The app allows you take a note and save the note in local storage. I was unable 
 Run `npm start`
 Copy: http://localhost:3001 into browser and click on the button to enter the app. The path of the app should change to http://localhost:3001/notes where the user will be able to enter notes and save them.
 
+## Deployed Page
  <a href="https://pacific-ravine-09437.herokuapp.com/">Click for live link</a>
 
 # ScreenShots of app
@@ -60,6 +61,7 @@ SOFTWARE.
 <li> Node.js</li>
 <li>Endpoint API</li>
 <li>javascript</li>
+<li>Heroku Deployment</li>
 
 
   
