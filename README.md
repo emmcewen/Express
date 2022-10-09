@@ -7,12 +7,16 @@ Main functions of this app are:
 The app allows you take a note and save the note in local storage. I was unable to get the delete note to work, but the rest works.
 
 ## Usage
-Type in location and see the 5 day forecast for the area and see previous locations searched. 
+Run `npm start`
+Copy: http://localhost:3001 into browser and click on the button to enter the app. The path of the app should change to http://localhost:3001/notes where the user will be able to enter notes and save them.
 
- <a href="https://emmcewen.github.io/Weather_Dashboard/">Click for live link</a>
+ <a href="https://github.com/emmcewen/ExpressNoteTaker">Click for live link</a>
 
 # ScreenShots of app
-![screenshot1](Assets/WeatherDashboard-Screenshot.png)
+![screenshot1](Assets/Express%20NoteTaker.png)
+
+# Video Walkthrough
+![Video](Assets/ExpressNoteTaker_walkthrough.mov)
 
 ## Credits
 
@@ -53,10 +57,8 @@ SOFTWARE.
 
 # Technologies Used:
 <li>Express.js</li>
-<li>RESTful API</li>
-<li>HTML </li>
-<li> CSS</li>
-<li> Bootstrap</li>
+<li> Node.js</li>
+<li>Endpoint API</li>
 <li>javascript</li>
 
 
